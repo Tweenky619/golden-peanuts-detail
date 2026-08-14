@@ -17,8 +17,8 @@ Then visit http://localhost:8000
 - `images/` — put `logo.png` (the peanut mascot logo) and any gallery/before-after photos here
 
 ## TODO before launch
-- [ ] Add `images/logo.png` (transparent background version of the logo)
-- [ ] Add `images/favicon.png`
+- [x] Add `images/logo.png` (transparent background version of the logo)
+- [x] Add `images/favicon.png`
 - [ ] Add real before/after photos to the Gallery section (`index.html`, `#gallery`)
 - [x] Add pricing to each service card (Inside/Outside/Complete/Polishing + RV/Trailer/Boat, per email)
 - [x] Venmo link confirmed (`@lunadlgd03`)
