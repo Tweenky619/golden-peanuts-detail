@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Your Detail | Golden Peanut's Detail</title>
+<meta name="description" content="Book your mobile car detailing appointment with Golden Peanut's Detail in San Diego. Call, text, email, or request a booking online.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="images/favicon.png" type="image/png">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <img src="images/logo.png" alt="Golden Peanut's Detail logo" onerror="this.style.display='none'">
+      <span class="logo-text">Golden Peanut's<span class="logo-sub">Detail</span></span>
+    </a>
+    <nav class="main-nav" id="main-nav">
+      <a href="services.html">Services</a>
+      <a href="index.html#how-it-works">How It Works</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="faq.html">FAQ</a>
+      <a href="about.html">About</a>
+      <a href="pay.html">Pay</a>
+      <a href="contact.html" class="nav-cta">Get a Quote</a>
+      <a href="tel:6194385149" class="btn btn-call">Call/Text 619-438-5149</a>
+    </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <h1>Book Your Detail</h1>
+      <p>Call, text, email, or send us your info and we'll get back to you to schedule.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container contact-inner">
+      <div class="contact-info">
+        <div class="contact-methods">
+          <a href="tel:6194385149" class="contact-method">
+            <span class="contact-icon">📞</span>
+            <span>Call or Text<br><strong>(619) 438-5149</strong></span>
+          </a>
+          <a href="mailto:goldenpeanutsdetail@gmail.com" class="contact-method">
+            <span class="contact-icon">✉️</span>
+            <span>Email<br><strong>goldenpeanutsdetail@gmail.com</strong></span>
+          </a>
+        </div>
+        <p class="lang-note">🌐 We speak English &amp; Spanish — ¡Hablamos español!</p>
+      </div>
+
+      <form class="booking-form" id="booking-form">
+        <label>
+          Name
+          <input type="text" name="name" required>
+        </label>
+        <label>
+          Phone
+          <input type="tel" name="phone" required>
+        </label>
+        <label>
+          Email
+          <input type="email" name="email">
+        </label>
+        <label>
+          Vehicle (year/make/model)
+          <input type="text" name="vehicle">
+        </label>
+        <label>
+          Service Interested In
+          <select name="service">
+            <option value="Inside Detail">Inside Detail</option>
+            <option value="Outside Detail">Outside Detail</option>
+            <option value="Complete Detail">Complete Detail</option>
+            <option value="Polishing">Polishing</option>
+            <option value="RV / Trailer">RV / Trailer</option>
+            <option value="Boat">Boat</option>
+            <option value="Not sure / other vehicle">Not sure / other vehicle</option>
+          </select>
+        </label>
+        <label>
+          Message
+          <textarea name="message" rows="4" placeholder="Tell us about your vehicle and preferred date/time"></textarea>
+        </label>
+        <button type="submit" class="btn btn-primary">Request Booking</button>
+        <p class="form-note" id="form-note"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>&copy; <span id="year"></span> Golden Peanut's Detail. Thank you for supporting local!</p>
+    <p class="footer-contact">(619) 438-5149 &nbsp;•&nbsp; goldenpeanutsdetail@gmail.com &nbsp;•&nbsp; San Diego, CA</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

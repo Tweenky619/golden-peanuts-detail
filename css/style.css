@@ -37,6 +37,34 @@ h1, h2, h3 { color: var(--navy); margin: 0 0 0.5em; }
 .section { padding: 72px 0; }
 .section-alt { background: var(--gray-light); }
 
+/* PAGE HERO (sub-pages) */
+.page-hero {
+  background: linear-gradient(180deg, var(--teal) 0%, var(--teal-dark) 100%);
+  color: var(--white);
+  padding: 60px 0;
+  text-align: center;
+}
+.page-hero h1 { color: var(--white); margin-bottom: 8px; }
+.page-hero p { margin: 0; font-size: 1.1rem; opacity: 0.95; }
+
+/* EXPLORE GRID (home) */
+.explore-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+.explore-card {
+  background: var(--white);
+  border: 1px solid #e4e9ea;
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  box-shadow: var(--shadow);
+  transition: transform 0.15s ease;
+}
+.explore-card:hover { transform: translateY(-4px); }
+.explore-icon { font-size: 2rem; display: block; margin-bottom: 10px; }
+.explore-card p { color: #555; font-size: 0.92rem; margin: 0; }
+
 .section-title {
   font-size: 2rem;
   text-align: center;

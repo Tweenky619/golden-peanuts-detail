@@ -16,22 +16,25 @@ mainNav.querySelectorAll('a').forEach((link) => {
 });
 
 const form = document.getElementById('booking-form');
-const formNote = document.getElementById('form-note');
 
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
+if (form) {
+  const formNote = document.getElementById('form-note');
 
-  const data = new FormData(form);
-  const subject = encodeURIComponent(`Booking request: ${data.get('service') || 'Detail'}`);
-  const body = encodeURIComponent(
-    `Name: ${data.get('name')}\n` +
-    `Phone: ${data.get('phone')}\n` +
-    `Email: ${data.get('email')}\n` +
-    `Vehicle: ${data.get('vehicle')}\n` +
-    `Service: ${data.get('service')}\n\n` +
-    `Message:\n${data.get('message')}`
-  );
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
 
-  window.location.href = `mailto:goldenpeanutsdetail@gmail.com?subject=${subject}&body=${body}`;
-  formNote.textContent = 'Opening your email app to send this request…';
-});
+    const data = new FormData(form);
+    const subject = encodeURIComponent(`Booking request: ${data.get('service') || 'Detail'}`);
+    const body = encodeURIComponent(
+      `Name: ${data.get('name')}\n` +
+      `Phone: ${data.get('phone')}\n` +
+      `Email: ${data.get('email')}\n` +
+      `Vehicle: ${data.get('vehicle')}\n` +
+      `Service: ${data.get('service')}\n\n` +
+      `Message:\n${data.get('message')}`
+    );
+
+    window.location.href = `mailto:goldenpeanutsdetail@gmail.com?subject=${subject}&body=${body}`;
+    formNote.textContent = 'Opening your email app to send this request…';
+  });
+}
