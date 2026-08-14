@@ -126,6 +126,13 @@ h1, h2, h3 { color: var(--navy); margin: 0 0 0.5em; }
   color: var(--navy);
 }
 .main-nav a:not(.btn):hover { color: var(--teal); }
+.main-nav a.nav-cta {
+  background: var(--gold);
+  color: var(--navy);
+  padding: 8px 16px;
+  border-radius: 999px;
+}
+.main-nav a.nav-cta:hover { color: var(--navy); opacity: 0.9; }
 
 .nav-toggle {
   display: none;
@@ -159,6 +166,14 @@ h1, h2, h3 { color: var(--navy); margin: 0 0 0.5em; }
   border-radius: 999px;
   margin-bottom: 20px;
   font-size: 0.85rem;
+}
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--gold-light);
+  margin: 0 0 10px;
 }
 .hero h1 {
   color: var(--white);
@@ -373,6 +388,67 @@ h1, h2, h3 { color: var(--navy); margin: 0 0 0.5em; }
 }
 .gallery-photo:hover img {
   transform: scale(1.05);
+}
+
+/* HOW IT WORKS */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 28px;
+}
+.step-card {
+  text-align: center;
+  padding: 12px;
+}
+.step-number {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--teal);
+  color: var(--white);
+  font-weight: 800;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px;
+}
+.step-card p {
+  color: #444;
+  font-size: 0.95rem;
+}
+
+/* FAQ */
+.faq-container { max-width: 780px; }
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.faq-item {
+  background: var(--gray-light);
+  border-radius: var(--radius);
+  padding: 6px 20px;
+}
+.faq-item summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--navy);
+  padding: 14px 0;
+  list-style: none;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: "+";
+  float: right;
+  font-size: 1.3rem;
+  color: var(--teal-dark);
+}
+.faq-item[open] summary::after { content: "\2212"; }
+.faq-item p {
+  margin: 0 0 16px;
+  color: #444;
+  font-size: 0.95rem;
 }
 
 /* ABOUT */
