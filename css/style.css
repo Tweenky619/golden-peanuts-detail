@@ -196,18 +196,19 @@ h1, h2, h3 { color: var(--navy); margin: 0 0 0.5em; }
 .google-rating-badge {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   background: var(--white);
-  color: var(--navy);
+  color: #202124;
   padding: 10px 20px;
   border-radius: 999px;
   margin-bottom: 28px;
   font-weight: 700;
   box-shadow: var(--shadow);
 }
-.google-rating-score { font-size: 1.1rem; }
-.google-rating-stars { color: var(--gold); letter-spacing: 1px; }
-.google-rating-count { color: #555; font-weight: 600; font-size: 0.9rem; }
+.google-g-icon { width: 18px; height: 18px; flex-shrink: 0; }
+.google-rating-score { font-size: 1.1rem; color: #202124; }
+.google-rating-stars { color: #fbbc05; letter-spacing: 1px; }
+.google-rating-count { color: #70757a; font-weight: 600; font-size: 0.9rem; }
 
 .trust-bar {
   display: flex;
