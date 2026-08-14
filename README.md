@@ -20,8 +20,8 @@ Then visit http://localhost:8000
 - [ ] Add `images/logo.png` (transparent background version of the logo)
 - [ ] Add `images/favicon.png`
 - [ ] Add real before/after photos to the Gallery section (`index.html`, `#gallery`)
-- [ ] Add pricing to each service card once finalized
-- [ ] Double check Venmo link (`@lunadlgd03`)
+- [x] Add pricing to each service card (Inside/Outside/Complete/Polishing + RV/Trailer/Boat, per email)
+- [x] Venmo link confirmed (`@lunadlgd03`)
 - [ ] Deploy (GitHub Pages, Netlify, or Vercel all work with zero config for static sites)
 
 ## Deploying with GitHub Pages

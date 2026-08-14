@@ -67,42 +67,35 @@
 
       <div class="services-grid">
         <div class="service-card">
-          <div class="service-icon">🚗</div>
-          <h3>Mini Detail</h3>
-          <ul>
-            <li>Exterior hand wash</li>
-            <li>Interior vacuuming</li>
-            <li>Window cleaning</li>
-            <li>Dashboard wipe-down</li>
-            <li>Quick interior refresh</li>
-          </ul>
-          <a href="#contact" class="btn btn-card">Get a Quote</a>
-        </div>
-
-        <div class="service-card">
           <div class="service-icon">🪑</div>
-          <h3>Interior Detail</h3>
+          <h3>Inside Detail</h3>
+          <table class="price-table">
+            <tr><td>Coupe</td><td>$125</td></tr>
+            <tr><td>Sedan</td><td>$150</td></tr>
+            <tr><td>Big vehicle / 3-row / truck</td><td>$200</td></tr>
+          </table>
           <ul>
-            <li>Deep vacuuming</li>
-            <li>Carpet cleaning</li>
-            <li>Seat cleaning</li>
-            <li>Dashboard and console detailing</li>
-            <li>Door panel cleaning</li>
-            <li>Interior conditioning and protection</li>
+            <li>Inside vacuum, wipe down</li>
+            <li>Shampoo carpets, floor mat cleaning</li>
+            <li>Dressing all interior plastic and leather</li>
+            <li>Interior windows and door jams</li>
           </ul>
           <a href="#contact" class="btn btn-card">Get a Quote</a>
         </div>
 
         <div class="service-card">
           <div class="service-icon">✨</div>
-          <h3>Exterior Detail</h3>
+          <h3>Outside Detail</h3>
+          <table class="price-table">
+            <tr><td>Coupe</td><td>$100</td></tr>
+            <tr><td>Sedan / SUV</td><td>$125</td></tr>
+            <tr><td>Big vehicle / 3-row / truck</td><td>$150</td></tr>
+          </table>
           <ul>
-            <li>Premium hand wash</li>
-            <li>Wheel and tire cleaning</li>
-            <li>Paint decontamination</li>
-            <li>Wax protection</li>
-            <li>Tire shine</li>
-            <li>Professional exterior finish</li>
+            <li>Wash, clay bar, wax</li>
+            <li>Dress trim/plastics</li>
+            <li>Wash door jams</li>
+            <li>Ceramic add-on available (+$50)</li>
           </ul>
           <a href="#contact" class="btn btn-card">Get a Quote</a>
         </div>
@@ -111,14 +104,59 @@
           <div class="service-badge">Most Popular</div>
           <div class="service-icon">💎</div>
           <h3>Complete Detail</h3>
+          <table class="price-table">
+            <tr><td>Coupe</td><td>$200</td></tr>
+            <tr><td>Sedan</td><td>$220</td></tr>
+            <tr><td>3-row / truck</td><td>$250</td></tr>
+          </table>
           <ul>
-            <li>Everything in the Interior Detail</li>
-            <li>Everything in the Exterior Detail</li>
-            <li>Full vehicle restoration cleaning</li>
-            <li>Maximum shine and protection</li>
-            <li>Showroom-quality finish</li>
+            <li>Includes Inside &amp; Outside Detail packages</li>
+            <li>Ceramic upgrade discounted to $30</li>
           </ul>
           <a href="#contact" class="btn btn-card btn-card-primary">Get a Quote</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🌟</div>
+          <h3>Polishing</h3>
+          <table class="price-table">
+            <tr><td>2-door coupe</td><td>$150</td></tr>
+            <tr><td>4-door sedan</td><td>$200</td></tr>
+            <tr><td>Large 3-row / truck</td><td>$300</td></tr>
+          </table>
+          <a href="#contact" class="btn btn-card">Get a Quote</a>
+        </div>
+      </div>
+
+      <div class="pricing-note-grid">
+        <div class="pricing-note-card">
+          <h4>Ceramic Upgrade</h4>
+          <p>$50 standalone &mdash; discounted to $30 when added to a Complete Detail.</p>
+        </div>
+        <div class="pricing-note-card">
+          <h4>Extras</h4>
+          <p>$30 per 30 extra minutes needed for: excessive hair, sand, mud, crumbs, food, trash, stains, headliner, cement, overspray, tree sap, water spots, odor (vomit/animal/urine/mold), heavy use, or trim/plastic restoration.</p>
+        </div>
+      </div>
+
+      <div class="vehicles-block">
+        <h3>RV / Trailer &amp; Boat Pricing</h3>
+        <div class="big-vehicle-grid">
+          <div class="big-vehicle-card">
+            <h4>RV / Trailer</h4>
+            <ul>
+              <li><strong>Wash</strong> &mdash; $10/ft — roof, all sides, exterior windows, tire dressing</li>
+              <li><strong>Wash &amp; Wax</strong> (ceramic) &mdash; $20/ft — roof, wheels, all sides, exterior windows, trim/plastic dressing, tire dressing. Ceramic doesn't fix oxidation.</li>
+              <li><strong>Restoration</strong> &mdash; $25&ndash;$40/ft depending on condition</li>
+            </ul>
+          </div>
+          <div class="big-vehicle-card">
+            <h4>Boats</h4>
+            <ul>
+              <li><strong>Mini Detail</strong> &mdash; $15/ft — vacuum inside, wipe down seats/carpet/plastics/steering column, wash outside/wheels, dress tires</li>
+              <li><strong>Complete Detail</strong> &mdash; $30/ft — everything in Mini Detail plus wax outside. Ceramic upgrade available.</li>
+            </ul>
+          </div>
         </div>
       </div>
 
@@ -231,10 +269,12 @@
         <label>
           Service Interested In
           <select name="service">
-            <option value="Mini Detail">Mini Detail</option>
-            <option value="Interior Detail">Interior Detail</option>
-            <option value="Exterior Detail">Exterior Detail</option>
+            <option value="Inside Detail">Inside Detail</option>
+            <option value="Outside Detail">Outside Detail</option>
             <option value="Complete Detail">Complete Detail</option>
+            <option value="Polishing">Polishing</option>
+            <option value="RV / Trailer">RV / Trailer</option>
+            <option value="Boat">Boat</option>
             <option value="Not sure / other vehicle">Not sure / other vehicle</option>
           </select>
         </label>
