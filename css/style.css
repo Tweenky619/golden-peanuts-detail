@@ -152,9 +152,11 @@ h1, h2, h3 { color: var(--navy); margin: 0 0 0.5em; }
 
 /* HERO */
 .hero {
-  background: linear-gradient(180deg, var(--teal) 0%, var(--teal-dark) 100%);
+  background:
+    linear-gradient(180deg, rgba(11, 37, 69, 0.75) 0%, rgba(11, 37, 69, 0.88) 100%),
+    url("../images/gallery/gallery-lamborghini.jpg") center 30% / cover no-repeat;
   color: var(--white);
-  padding: 70px 0 50px;
+  padding: 90px 0 60px;
   text-align: center;
 }
 .badge-ribbon {
