@@ -209,6 +209,11 @@ h1, h2, h3 { color: var(--navy); margin: 0 0 0.5em; }
 .google-rating-score { font-size: 1.1rem; color: #202124; }
 .google-rating-stars { color: #fbbc05; letter-spacing: 1px; }
 .google-rating-count { color: #70757a; font-weight: 600; font-size: 0.9rem; }
+.google-word { font-weight: 700; }
+.google-word .g-blue { color: #4285F4; }
+.google-word .g-red { color: #EA4335; }
+.google-word .g-yellow { color: #FBBC05; }
+.google-word .g-green { color: #34A853; }
 
 .trust-bar {
   display: flex;
