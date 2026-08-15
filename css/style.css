@@ -544,7 +544,12 @@ h1, h2, h3 { color: var(--navy); margin: 0 0 0.5em; }
 }
 
 /* INTRO */
-.intro-container { max-width: 780px; }
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
 .eyebrow-dark { color: var(--teal-dark); }
 .intro-section p {
   color: #444;
@@ -553,6 +558,21 @@ h1, h2, h3 { color: var(--navy); margin: 0 0 0.5em; }
   margin: 0 0 18px;
 }
 .intro-section .btn { margin-top: 8px; }
+.intro-logo-wrap {
+  background: var(--gray-light);
+  border-radius: var(--radius);
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.intro-logo { width: 100%; max-width: 320px; height: auto; }
+
+@media (max-width: 860px) {
+  .intro-grid { grid-template-columns: 1fr; }
+  .intro-logo-wrap { order: -1; padding: 24px; }
+  .intro-logo { max-width: 220px; }
+}
 
 /* HOW IT WORKS */
 .steps-grid {
