@@ -543,6 +543,17 @@ h1, h2, h3 { color: var(--navy); margin: 0 0 0.5em; }
   line-height: 1.4;
 }
 
+/* INTRO */
+.intro-container { max-width: 780px; }
+.eyebrow-dark { color: var(--teal-dark); }
+.intro-section p {
+  color: #444;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin: 0 0 18px;
+}
+.intro-section .btn { margin-top: 8px; }
+
 /* HOW IT WORKS */
 .steps-grid {
   display: grid;
