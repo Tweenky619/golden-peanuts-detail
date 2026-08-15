@@ -260,6 +260,27 @@ h1, h2, h3 { color: var(--navy); margin: 0 0 0.5em; }
 }
 .trust-icon { color: var(--gold); font-size: 1.2rem; }
 
+/* PHOTO BAND */
+.photo-band {
+  background:
+    linear-gradient(180deg, rgba(11, 37, 69, 0.75) 0%, rgba(11, 37, 69, 0.88) 100%),
+    url("../images/gallery/gallery-bmw-interior-1.jpg") center 35% / cover no-repeat;
+  color: var(--white);
+  padding: 90px 0;
+  text-align: center;
+}
+.photo-band-inner .eyebrow { color: var(--gold-light); }
+.photo-band h2 {
+  color: var(--white);
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+}
+.photo-band-sub {
+  font-size: 1.1rem;
+  margin: 0 0 28px;
+  opacity: 0.95;
+}
+
 /* SERVICES */
 .services-grid {
   display: grid;
