@@ -509,7 +509,7 @@ h1, h2, h3 { color: var(--navy); margin: 0 0 0.5em; }
   display: block;
   border-radius: var(--radius);
   overflow: hidden;
-  aspect-ratio: 3/4;
+  aspect-ratio: 2/3.2;
   box-shadow: var(--shadow);
 }
 .ps-card img {
