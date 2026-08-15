@@ -578,11 +578,11 @@ h1, h2, h3 { color: var(--navy); margin: 0 0 0.5em; }
 }
 .intro-logo-hose {
   position: absolute;
-  left: 0;
-  top: 47.7%;
-  width: 67.1%;
+  left: 19.3%;
+  top: 46.8%;
+  width: 62.3%;
   height: auto;
-  transform-origin: 92% 29%;
+  transform-origin: 68% 6%;
   animation: hose-wiggle 2.4s ease-in-out infinite;
 }
 
