@@ -566,35 +566,12 @@ h1, h2, h3 { color: var(--navy); margin: 0 0 0.5em; }
   align-items: center;
   justify-content: center;
 }
-.intro-logo-stage {
-  position: relative;
-  width: 100%;
-  max-width: 320px;
-}
-.intro-logo-base {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-.intro-logo-hose {
-  position: absolute;
-  left: 19.3%;
-  top: 46.8%;
-  width: 62.3%;
-  height: auto;
-  transform-origin: 68% 6%;
-  animation: hose-wiggle 2.4s ease-in-out infinite;
-}
-
-@keyframes hose-wiggle {
-  0%, 100% { transform: rotate(-5deg); }
-  50% { transform: rotate(5deg); }
-}
+.intro-logo { width: 100%; max-width: 320px; height: auto; }
 
 @media (max-width: 860px) {
   .intro-grid { grid-template-columns: 1fr; }
   .intro-logo-wrap { order: -1; padding: 24px; }
-  .intro-logo-stage { max-width: 220px; }
+  .intro-logo { max-width: 220px; }
 }
 
 /* HOW IT WORKS */
