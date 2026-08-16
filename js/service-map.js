@@ -50,13 +50,15 @@ if (mapEl && window.L) {
 
   serviceAreas.forEach((area) => {
     area.cities.forEach((city) => {
-      L.circleMarker([city.lat, city.lng], {
-        radius: 7,
-        color: '#ffffff',
-        weight: 2,
-        fillColor: area.color,
-        fillOpacity: 0.9,
-      })
+      const icon = L.divIcon({
+        className: 'mascot-pin',
+        html: `<img src="images/step-shine-mascot.png" alt="" style="border-color:${area.color}">`,
+        iconSize: [36, 36],
+        iconAnchor: [18, 18],
+        popupAnchor: [0, -20],
+      });
+
+      L.marker([city.lat, city.lng], { icon })
         .addTo(map)
         .bindPopup(`<strong>${city.name}</strong><br>${area.name}`);
     });
