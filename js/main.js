@@ -15,48 +15,38 @@ mainNav.querySelectorAll('a').forEach((link) => {
   });
 });
 
-const form = document.getElementById('booking-form');
+function wireFormspreeForm(formId, noteId) {
+  const form = document.getElementById(formId);
+  if (!form) return;
 
-if (form) {
-  const formNote = document.getElementById('form-note');
+  const note = document.getElementById(noteId);
+  const submitBtn = form.querySelector('button[type="submit"]');
 
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
+    note.textContent = 'Sending…';
+    if (submitBtn) submitBtn.disabled = true;
 
-    const data = new FormData(form);
-    const subject = encodeURIComponent(`Booking request: ${data.get('service') || 'Detail'}`);
-    const body = encodeURIComponent(
-      `Name: ${data.get('name')}\n` +
-      `Phone: ${data.get('phone')}\n` +
-      `Email: ${data.get('email')}\n` +
-      `Vehicle: ${data.get('vehicle')}\n` +
-      `Service: ${data.get('service')}\n\n` +
-      `Message:\n${data.get('message')}`
-    );
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' },
+      });
 
-    window.location.href = `mailto:goldenpeanutsdetail@gmail.com?subject=${subject}&body=${body}`;
-    formNote.textContent = 'Opening your email app to send this request…';
+      if (response.ok) {
+        note.textContent = "Thanks! We've got your request and will be in touch shortly.";
+        form.reset();
+      } else {
+        note.textContent = 'Something went wrong. Please call or text us at (619) 438-5149 instead.';
+      }
+    } catch (err) {
+      note.textContent = 'Something went wrong. Please call or text us at (619) 438-5149 instead.';
+    } finally {
+      if (submitBtn) submitBtn.disabled = false;
+    }
   });
 }
 
-const quoteForm = document.getElementById('quote-form');
-
-if (quoteForm) {
-  const quoteFormNote = document.getElementById('quote-form-note');
-
-  quoteForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const data = new FormData(quoteForm);
-    const subject = encodeURIComponent('Free quote request');
-    const body = encodeURIComponent(
-      `Name: ${data.get('first_name')} ${data.get('last_name')}\n` +
-      `Email: ${data.get('email')}\n` +
-      `Phone: ${data.get('phone')}\n` +
-      `How they found us: ${data.get('source')}`
-    );
-
-    window.location.href = `mailto:goldenpeanutsdetail@gmail.com?subject=${subject}&body=${body}`;
-    quoteFormNote.textContent = 'Opening your email app to send this request…';
-  });
-}
+wireFormspreeForm('booking-form', 'form-note');
+wireFormspreeForm('quote-form', 'quote-form-note');
