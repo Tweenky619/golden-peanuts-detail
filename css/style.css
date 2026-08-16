@@ -569,9 +569,10 @@ h1, h2, h3 { color: var(--navy); margin: 0 0 0.5em; }
 .intro-logo { width: 100%; max-width: 320px; height: auto; }
 
 @media (max-width: 860px) {
-  .intro-grid { grid-template-columns: 1fr; }
-  .intro-logo-wrap { order: -1; padding: 24px; }
-  .intro-logo { max-width: 220px; }
+  .intro-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; }
+  .intro-logo-wrap { padding: 14px; }
+  .intro-logo { max-width: 120px; }
+  .intro-section .section-title { font-size: 1.4rem; }
 }
 
 /* SPOTLESS FINISH / SERVICE AREA */
@@ -631,8 +632,9 @@ h1, h2, h3 { color: var(--navy); margin: 0 0 0.5em; }
 }
 
 @media (max-width: 860px) {
-  .spotless-grid { grid-template-columns: 1fr; }
-  .spotless-image { order: -1; }
+  .spotless-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; }
+  .spotless-text .section-title { font-size: 1.3rem; }
+  .spotless-text p { font-size: 0.88rem; margin: 10px 0 14px; }
 }
 
 /* HOW IT WORKS */
@@ -927,7 +929,7 @@ h1, h2, h3 { color: var(--navy); margin: 0 0 0.5em; }
 /* CONTACT */
 .contact-inner {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 48px;
   align-items: start;
 }
@@ -985,11 +987,12 @@ h1, h2, h3 { color: var(--navy); margin: 0 0 0.5em; }
 
 /* RESPONSIVE */
 @media (max-width: 860px) {
-  .contact-inner { grid-template-columns: 1fr; }
+  .contact-inner { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; }
 }
 @media (max-width: 640px) {
-  .reviews-row { flex-direction: column; }
-  .reviews-summary { width: 100%; flex-direction: row; justify-content: center; gap: 12px; padding: 16px; }
+  .reviews-row { gap: 12px; }
+  .reviews-summary { width: 130px; flex-direction: column; padding: 10px; }
+  .reviews-summary-based { font-size: 0.78rem; }
   .reviews-intro { gap: 14px; }
   .reviews-title { font-size: 1.3rem; }
   .reviews-mascot { width: 90px; }
