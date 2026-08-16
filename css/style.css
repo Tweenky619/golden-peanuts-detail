@@ -762,6 +762,12 @@ h1, h2, h3 { color: var(--navy); margin: 0 0 0.5em; }
   justify-content: center;
   margin-top: 8px;
 }
+.reviews-cta-btn {
+  background: var(--navy);
+  color: var(--white);
+  border-color: var(--navy);
+}
+.reviews-cta-btn:hover { background: var(--teal-dark); border-color: var(--teal-dark); }
 
 /* FAQ */
 .faq-container { max-width: 780px; }
