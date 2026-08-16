@@ -929,10 +929,9 @@ h1, h2, h3 { color: var(--navy); margin: 0 0 0.5em; }
 @media (max-width: 640px) {
   .reviews-row { flex-direction: column; }
   .reviews-summary { width: 100%; flex-direction: row; justify-content: center; gap: 12px; padding: 16px; }
-  .reviews-intro { flex-direction: column; text-align: center; }
-  .reviews-intro-text { text-align: center; }
-  .reviews-title { text-align: center; }
-  .reviews-mascot { width: 140px; }
+  .reviews-intro { gap: 14px; }
+  .reviews-title { font-size: 1.3rem; }
+  .reviews-mascot { width: 90px; }
 }
 
 @media (max-width: 720px) {
