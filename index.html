@@ -7,6 +7,7 @@
 <meta name="description" content="Golden Peanut's Detail — mobile car detailing in San Diego. Over 10 years of experience. We come to you: home, office, work, anywhere. Se habla español.">
 <link rel="stylesheet" href="css/style.css">
 <link rel="icon" href="images/favicon.png" type="image/png">
+<link rel="stylesheet" href="vendor/leaflet/leaflet.css">
 </head>
 <body>
 
@@ -164,6 +165,21 @@
     </div>
   </section>
 
+  <!-- SERVICE AREA MAP -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Where We've Earned Jobs Across San Diego</h2>
+      <p class="section-sub">Every pin marks a real neighborhood we've worked in &mdash; grouped by region.</p>
+      <div id="service-map" class="service-map" role="img" aria-label="Map of San Diego County showing cities Golden Peanut's Detail has served"></div>
+      <div class="map-legend">
+        <span><i class="map-dot" style="background:#2e8b57"></i>North County</span>
+        <span><i class="map-dot" style="background:#f5a623"></i>East County</span>
+        <span><i class="map-dot" style="background:#7c5cf0"></i>Central San Diego</span>
+        <span><i class="map-dot" style="background:#1c93a0"></i>South Bay</span>
+      </div>
+    </div>
+  </section>
+
   <!-- REVIEWS -->
   <section class="section section-alt reviews-section">
     <div class="container">
@@ -281,5 +297,7 @@
 </footer>
 
 <script src="js/main.js"></script>
+<script src="vendor/leaflet/leaflet.js"></script>
+<script src="js/service-map.js"></script>
 </body>
 </html>
