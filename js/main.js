@@ -9,6 +9,26 @@ navToggle.addEventListener('click', () => {
 });
 
 mainNav.querySelectorAll('a').forEach((link) => {
+  if (link.classList.contains('nav-dropdown-toggle')) return;
+  link.addEventListener('click', () => {
+    mainNav.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  });
+});
+
+document.querySelectorAll('.nav-dropdown-toggle').forEach((toggle) => {
+  toggle.addEventListener('click', (e) => {
+    if (window.innerWidth <= 720) {
+      e.preventDefault();
+      toggle.closest('.nav-dropdown').classList.toggle('open');
+    } else {
+      mainNav.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+});
+
+document.querySelectorAll('.nav-dropdown-menu a').forEach((link) => {
   link.addEventListener('click', () => {
     mainNav.classList.remove('open');
     navToggle.setAttribute('aria-expanded', 'false');
