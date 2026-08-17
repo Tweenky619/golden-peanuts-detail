@@ -371,6 +371,7 @@ h1, h2, h3 { color: var(--navy); margin: 0 0 0.5em; }
   white-space: nowrap;
 }
 .service-icon { font-size: 2rem; margin-bottom: 8px; }
+.service-icon-mascot { width: 110px; height: auto; margin-bottom: 8px; }
 .service-card ul {
   list-style: none;
   padding: 0;
