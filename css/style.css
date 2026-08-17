@@ -211,11 +211,6 @@ h1, h2, h3 { color: var(--navy); margin: 0 0 0.5em; }
   background: var(--bg-light, #f4f6f9);
   color: var(--teal);
 }
-.nav-dropdown-soon {
-  color: #9aa2ad;
-  cursor: not-allowed;
-}
-
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -601,11 +596,6 @@ h1, h2, h3 { color: var(--navy); margin: 0 0 0.5em; }
   color: #dfe6ee;
   line-height: 1.4;
 }
-.ps-card-soon { cursor: not-allowed; }
-.ps-card-soon img { filter: grayscale(85%); }
-.ps-card-soon:hover img { transform: none; }
-.service-choice-grid { margin-top: 8px; }
-
 /* INTRO */
 .intro-grid {
   display: grid;
