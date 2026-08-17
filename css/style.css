@@ -475,6 +475,25 @@ h1, h2, h3 { color: var(--navy); margin: 0 0 0.5em; }
   background: var(--teal);
   color: var(--white);
 }
+.addons-with-mascot {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.addons-mascot {
+  width: 150px;
+  flex-shrink: 0;
+}
+.addons-content { flex: 1; min-width: 0; }
+.addons-with-mascot h3,
+.addons-with-mascot .menu-blurb { text-align: left; }
+.addons-with-mascot .addon-tags { justify-content: flex-start; margin-bottom: 0; }
+@media (max-width: 640px) {
+  .addons-with-mascot { flex-direction: column; text-align: center; }
+  .addons-with-mascot h3,
+  .addons-with-mascot .menu-blurb { text-align: center; }
+  .addons-with-mascot .addon-tags { justify-content: center; }
+}
 .addons-list {
   list-style: none;
   display: grid;
