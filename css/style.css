@@ -399,6 +399,47 @@ h1, h2, h3 { color: var(--navy); margin: 0 0 0.5em; }
   color: var(--teal-dark);
 }
 
+.offer-intro {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+.offer-mascot {
+  width: 130px;
+  flex-shrink: 0;
+}
+.offer-intro .section-title,
+.offer-intro .section-sub {
+  max-width: none;
+}
+.menu-blurb {
+  color: #555;
+  font-size: 0.92rem;
+  margin: 4px 0 14px;
+}
+.menu-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+  text-align: left;
+}
+.menu-checklist li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 8px;
+  font-size: 0.92rem;
+  color: #444;
+}
+.menu-checklist li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--teal);
+  font-weight: 700;
+}
+
 .addons {
   margin-top: 40px;
   background: var(--gray-light);
@@ -408,6 +449,30 @@ h1, h2, h3 { color: var(--navy); margin: 0 0 0.5em; }
 .addons h3 {
   text-align: center;
   margin-bottom: 20px;
+}
+.addon-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+.addon-tag {
+  background: var(--white);
+  border: 1px solid #d8dee1;
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--navy);
+}
+.addon-tag-link {
+  border-color: var(--teal);
+  color: var(--teal-dark);
+}
+.addon-tag-link:hover {
+  background: var(--teal);
+  color: var(--white);
 }
 .addons-list {
   list-style: none;
