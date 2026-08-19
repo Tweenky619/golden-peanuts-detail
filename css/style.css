@@ -346,6 +346,10 @@ h1, h2, h3 { color: var(--navy); margin: 0 0 0.5em; }
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 24px;
 }
+.menu-grid-3 { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 720px) {
+  .menu-grid-3 { grid-template-columns: 1fr; }
+}
 .service-card {
   background: var(--white);
   border: 1px solid #e4e9ea;
@@ -419,6 +423,12 @@ h1, h2, h3 { color: var(--navy); margin: 0 0 0.5em; }
   color: #555;
   font-size: 0.92rem;
   margin: 4px 0 14px;
+}
+.package-price {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--navy);
+  margin: 0 0 16px;
 }
 .menu-checklist {
   list-style: none;
@@ -824,6 +834,10 @@ h1, h2, h3 { color: var(--navy); margin: 0 0 0.5em; }
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 28px;
+}
+.steps-grid-3 { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 720px) {
+  .steps-grid-3 { grid-template-columns: 1fr; }
 }
 .step-card {
   text-align: center;

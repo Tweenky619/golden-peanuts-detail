@@ -70,3 +70,4 @@ function wireFormspreeForm(formId, noteId) {
 
 wireFormspreeForm('booking-form', 'form-note');
 wireFormspreeForm('quote-form', 'quote-form-note');
+wireFormspreeForm('ceramic-quote-form', 'ceramic-quote-form-note');
