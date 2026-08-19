@@ -71,3 +71,33 @@ function wireFormspreeForm(formId, noteId) {
 wireFormspreeForm('booking-form', 'form-note');
 wireFormspreeForm('quote-form', 'quote-form-note');
 wireFormspreeForm('ceramic-quote-form', 'ceramic-quote-form-note');
+
+const lightbox = document.getElementById('lightbox');
+if (lightbox) {
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxClose = document.getElementById('lightbox-close');
+
+  const openLightbox = (src, alt) => {
+    lightboxImg.src = src;
+    lightboxImg.alt = alt;
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeLightbox = () => {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  };
+
+  document.querySelectorAll('.gallery-photo img, .before-after-pair img').forEach((img) => {
+    img.addEventListener('click', () => openLightbox(img.src, img.alt));
+  });
+
+  lightboxClose.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+  });
+}
