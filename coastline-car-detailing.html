@@ -16,8 +16,9 @@
 <meta name="twitter:title" content="Mobile Car Detailing Along San Diego's Coastline | Golden Peanut's Detail">
 <meta name="twitter:description" content="Mobile car detailing for San Diego's coastline &mdash; Pacific Beach, Mission Beach, Ocean Beach, Del Mar, Solana Beach, Encinitas, Carlsbad, and Oceanside. We come to you.">
 <meta name="twitter:image" content="https://goldenpeanutsdetail.com/images/gallery/gallery-mini-moke.jpg">
-<link rel="stylesheet" href="css/style.css?v=20260822a">
+<link rel="stylesheet" href="css/style.css?v=20260822b">
 <link rel="icon" href="images/favicon.png" type="image/png">
+<link rel="stylesheet" href="vendor/leaflet/leaflet.css">
 </head>
 <body>
 
@@ -50,11 +51,26 @@
 </header>
 
 <main>
-  <section class="page-hero">
-    <div class="container">
+  <section class="hero coastline-hero">
+    <div class="container hero-inner">
       <div class="breadcrumb-link"><a href="index.html">&larr; Back to Home</a></div>
+      <p class="eyebrow">Mobile Car Detailing &mdash; San Diego Coastline</p>
       <h1>Mobile Car Detailing Along San Diego's Coastline</h1>
-      <p>Pacific Beach, Mission Beach, Ocean Beach, Del Mar, Solana Beach, Encinitas, Carlsbad &amp; Oceanside.</p>
+      <p class="hero-sub">Pacific Beach, Mission Beach, Ocean Beach, Del Mar, Solana Beach, Encinitas, Carlsbad &amp; Oceanside.</p>
+      <div class="hero-ctas">
+        <a href="contact.html" class="btn btn-primary">Book Now</a>
+        <a href="tel:6194385149" class="btn btn-outline">Call or Text (619) 438-5149</a>
+      </div>
+      <div class="trust-bar">
+        <div class="trust-item">
+          <span class="trust-icon">★</span>
+          <span>Over 10 Years Detailing Experience</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-icon">🚐</span>
+          <span>Mobile Service &mdash; We Come to You</span>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -72,7 +88,25 @@
         <a href="contact.html" class="btn btn-primary" style="margin-top: 20px; display: inline-block;">Book Your Coastline Detail</a>
       </div>
       <div class="spotless-image">
-        <img src="images/gallery/gallery-mini-moke.jpg" alt="Detailed classic beach car along San Diego's coastline">
+        <img src="images/gallery/gallery-audi-q3.jpg" alt="Detailed vehicle along San Diego's coastline">
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Our San Diego Coastal Coverage Area</h2>
+      <p class="section-sub">Bringing mobile detailing straight to your driveway along the entire San Diego coastline.</p>
+      <div id="coastline-map" class="service-map" role="img" aria-label="Map of San Diego coastal cities Golden Peanut's Detail serves"></div>
+      <div class="addon-tags" style="margin-top: 24px;">
+        <span class="addon-tag">🌊 Oceanside</span>
+        <span class="addon-tag">🌊 Carlsbad</span>
+        <span class="addon-tag">🌊 Encinitas</span>
+        <span class="addon-tag">🌊 Solana Beach</span>
+        <span class="addon-tag">🌊 Del Mar</span>
+        <span class="addon-tag">🌊 La Jolla</span>
+        <span class="addon-tag">🌊 Pacific Beach</span>
+        <span class="addon-tag">🌊 Mission Beach</span>
       </div>
     </div>
   </section>
@@ -153,5 +187,7 @@
 </footer>
 
 <script src="js/main.js?v=20260820a"></script>
+<script src="vendor/leaflet/leaflet.js"></script>
+<script src="js/coastline-map.js?v=20260822a"></script>
 </body>
 </html>
