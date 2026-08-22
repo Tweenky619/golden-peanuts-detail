@@ -246,6 +246,21 @@ h1, h2, h3 { color: var(--navy); margin: 0 0 0.5em; }
     linear-gradient(180deg, rgba(11, 37, 69, 0.75) 0%, rgba(11, 37, 69, 0.88) 100%),
     url("../images/gallery/gallery-tesla-model3.jpg") center 40% / cover no-repeat;
 }
+.coastline-hero {
+  background:
+    linear-gradient(180deg, rgba(11, 37, 69, 0.75) 0%, rgba(11, 37, 69, 0.88) 100%),
+    url("../images/gallery/gallery-tesla-model-x-wrap.jpg") center 40% / cover no-repeat;
+}
+.east-county-hero {
+  background:
+    linear-gradient(180deg, rgba(11, 37, 69, 0.75) 0%, rgba(11, 37, 69, 0.88) 100%),
+    url("../images/gallery/gallery-4runner-lifted.jpg") center 40% / cover no-repeat;
+}
+.south-bay-hero {
+  background:
+    linear-gradient(180deg, rgba(11, 37, 69, 0.75) 0%, rgba(11, 37, 69, 0.88) 100%),
+    url("../images/gallery/gallery-audi-a6.jpg") center 40% / cover no-repeat;
+}
 .badge-ribbon {
   display: inline-block;
   background: var(--white);
@@ -1313,6 +1328,8 @@ h1, h2, h3 { color: var(--navy); margin: 0 0 0.5em; }
 .footer-col p { margin: 0 0 8px; }
 .footer-col ul { list-style: none; margin: 0; padding: 0; }
 .footer-col li { margin-bottom: 8px; font-size: 0.92rem; color: #cfd8e3; }
+.footer-col li a { text-decoration: underline; text-decoration-color: rgba(207, 216, 227, 0.5); text-underline-offset: 2px; }
+.footer-col li a:hover { text-decoration-color: var(--white); }
 .footer-logo {
   display: flex;
   align-items: center;
