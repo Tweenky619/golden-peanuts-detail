@@ -32,4 +32,16 @@
     <loc>https://goldenpeanutsdetail.com/pay.html</loc>
     <priority>0.3</priority>
   </url>
+  <url>
+    <loc>https://goldenpeanutsdetail.com/coastline-car-detailing.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://goldenpeanutsdetail.com/east-county-car-detailing.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://goldenpeanutsdetail.com/south-bay-car-detailing.html</loc>
+    <priority>0.7</priority>
+  </url>
 </urlset>
