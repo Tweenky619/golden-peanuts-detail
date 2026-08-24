@@ -152,25 +152,25 @@ function loadGoogleReviews() {
     // ignore corrupt cache
   }
 
-  window.initGoogleReviews = function () {
-    const service = new google.maps.places.PlacesService(document.createElement('div'));
-    service.getDetails(
-      { placeId: GOOGLE_PLACE_ID, fields: ['rating', 'user_ratings_total'] },
-      (place, status) => {
-        if (status !== google.maps.places.PlacesServiceStatus.OK || !place) return;
-        const rating = place.rating;
-        const count = place.user_ratings_total;
-        updateGoogleReviewsUI(rating, count);
-        try {
-          sessionStorage.setItem(
-            GOOGLE_REVIEWS_CACHE_KEY,
-            JSON.stringify({ rating, count, ts: Date.now() })
-          );
-        } catch (e) {
-          // ignore storage errors
-        }
+  window.initGoogleReviews = async function () {
+    try {
+      const place = new google.maps.places.Place({ id: GOOGLE_PLACE_ID });
+      await place.fetchFields({ fields: ['rating', 'userRatingCount'] });
+      const rating = place.rating;
+      const count = place.userRatingCount;
+      if (rating == null || count == null) return;
+      updateGoogleReviewsUI(rating, count);
+      try {
+        sessionStorage.setItem(
+          GOOGLE_REVIEWS_CACHE_KEY,
+          JSON.stringify({ rating, count, ts: Date.now() })
+        );
+      } catch (e) {
+        // ignore storage errors
       }
-    );
+    } catch (e) {
+      // ignore Places API errors, keep hardcoded fallback text on the page
+    }
   };
 
   const script = document.createElement('script');
