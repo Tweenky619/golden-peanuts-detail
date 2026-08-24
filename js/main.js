@@ -125,13 +125,19 @@ function updateGoogleReviewsUI(rating, reviewCount) {
   document.querySelectorAll('.reviews-summary-stars').forEach((el) => {
     el.textContent = starsText;
   });
+  document.querySelectorAll('.reviews-summary-score').forEach((el) => {
+    el.textContent = scoreText;
+  });
   document.querySelectorAll('.reviews-summary-based').forEach((el) => {
     el.textContent = `Based on ${reviewCount} reviews`;
   });
 }
 
 function loadGoogleReviews() {
-  if (!document.querySelector('.google-rating-badge')) return;
+  const hasReviewsUI = document.querySelector(
+    '.google-rating-badge, .reviews-summary-stars, .reviews-summary-score, .reviews-summary-based'
+  );
+  if (!hasReviewsUI) return;
 
   try {
     const cacheRaw = sessionStorage.getItem(GOOGLE_REVIEWS_CACHE_KEY);
