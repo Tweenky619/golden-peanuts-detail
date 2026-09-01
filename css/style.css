@@ -41,13 +41,15 @@ h1, h2, h3 { color: var(--navy); margin: 0 0 0.5em; font-family: var(--font-seri
 
 /* PAGE HERO (sub-pages) */
 .page-hero {
-  background: linear-gradient(180deg, var(--teal) 0%, var(--teal-dark) 100%);
+  background:
+    radial-gradient(ellipse at 50% -20%, #16407a 0%, var(--navy) 60%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='70'%3E%3Ctext x='4' y='18' font-size='13' fill='%23ffffff' opacity='0.06'%3E%E2%98%85%3C/text%3E%3C/svg%3E");
   color: var(--white);
-  padding: 60px 0;
+  padding: 88px 0;
   text-align: center;
 }
-.page-hero h1 { color: var(--white); margin-bottom: 8px; }
-.page-hero p { margin: 0; font-size: 1.1rem; opacity: 0.95; }
+.page-hero h1 { color: var(--white); margin-bottom: 10px; font-size: 2.4rem; }
+.page-hero p { margin: 0; font-size: 1.1rem; opacity: 0.85; font-family: var(--font-sans); }
 .breadcrumb-link { margin: 0 0 10px; }
 .breadcrumb-link a { color: var(--gold-light); font-weight: 700; font-size: 0.9rem; opacity: 1; }
 .breadcrumb-link a:hover { color: var(--white); }
@@ -319,13 +321,16 @@ h1, h2, h3 { color: var(--navy); margin: 0 0 0.5em; font-family: var(--font-seri
 }
 .badge-ribbon {
   display: inline-block;
-  background: var(--white);
-  color: var(--navy);
-  font-weight: 700;
-  padding: 8px 18px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: var(--white);
+  font-weight: 600;
+  font-family: var(--font-sans);
+  padding: 6px 16px;
   border-radius: 999px;
   margin-bottom: 20px;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.3px;
 }
 .eyebrow {
   text-transform: uppercase;
