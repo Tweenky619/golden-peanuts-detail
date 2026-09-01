@@ -1,5 +1,29 @@
 document.getElementById('year').textContent = new Date().getFullYear();
 
+// PROMO BANNER
+const PROMO_BANNER_KEY = 'gp_promo_banner_dismissed_labor_day_2026';
+const promoBanner = document.getElementById('promo-banner');
+if (promoBanner) {
+  try {
+    if (localStorage.getItem(PROMO_BANNER_KEY)) {
+      promoBanner.style.display = 'none';
+    }
+  } catch (e) {
+    // ignore storage errors
+  }
+  const promoBannerClose = document.getElementById('promo-banner-close');
+  if (promoBannerClose) {
+    promoBannerClose.addEventListener('click', () => {
+      promoBanner.style.display = 'none';
+      try {
+        localStorage.setItem(PROMO_BANNER_KEY, '1');
+      } catch (e) {
+        // ignore storage errors
+      }
+    });
+  }
+}
+
 const navToggle = document.getElementById('nav-toggle');
 const mainNav = document.getElementById('main-nav');
 
