@@ -204,3 +204,64 @@ function loadGoogleReviews() {
 }
 
 loadGoogleReviews();
+
+// SCROLL REVEAL (subtle fade/rise on entry — no flythrough)
+const revealEls = document.querySelectorAll('.reveal');
+if (revealEls.length) {
+  if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach((el) => revealObserver.observe(el));
+  } else {
+    revealEls.forEach((el) => el.classList.add('is-visible'));
+  }
+}
+
+// BEFORE/AFTER COMPARE SLIDER
+const compareSlider = document.getElementById('compare-slider');
+if (compareSlider) {
+  const compareBefore = document.getElementById('compare-before');
+  const compareHandle = document.getElementById('compare-handle');
+  const compareImg = compareBefore.querySelector('img');
+
+  const syncCompareImageWidth = () => {
+    compareImg.style.width = compareSlider.offsetWidth + 'px';
+  };
+  syncCompareImageWidth();
+  window.addEventListener('resize', syncCompareImageWidth);
+
+  const setComparePosition = (percent) => {
+    const clamped = Math.min(100, Math.max(0, percent));
+    compareBefore.style.width = clamped + '%';
+    compareHandle.style.left = clamped + '%';
+  };
+  setComparePosition(50);
+
+  let dragging = false;
+  const moveFromClientX = (clientX) => {
+    const rect = compareSlider.getBoundingClientRect();
+    const percent = ((clientX - rect.left) / rect.width) * 100;
+    setComparePosition(percent);
+  };
+
+  compareSlider.addEventListener('pointerdown', (e) => {
+    dragging = true;
+    moveFromClientX(e.clientX);
+  });
+  window.addEventListener('pointermove', (e) => {
+    if (dragging) moveFromClientX(e.clientX);
+  });
+  window.addEventListener('pointerup', () => { dragging = false; });
+  compareSlider.addEventListener('touchstart', (e) => {
+    if (e.touches[0]) moveFromClientX(e.touches[0].clientX);
+  }, { passive: true });
+  compareSlider.addEventListener('touchmove', (e) => {
+    if (e.touches[0]) moveFromClientX(e.touches[0].clientX);
+  }, { passive: true });
+}

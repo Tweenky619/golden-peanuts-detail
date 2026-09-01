@@ -25,7 +25,10 @@
 <meta name="twitter:title" content="Golden Peanut's Detail | Mobile Car Detailing in San Diego">
 <meta name="twitter:description" content="Golden Peanut's Detail — mobile car detailing in San Diego. Over 10 years of experience. We come to you: home, office, work, anywhere. Se habla español.">
 <meta name="twitter:image" content="https://goldenpeanutsdetail.com/images/gallery/gallery-ford-f250.jpg">
-<link rel="stylesheet" href="css/style.css?v=20260901a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=20260901b">
 <link rel="icon" href="images/favicon.png" type="image/png">
 <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
 <script type="application/ld+json">
@@ -111,14 +114,14 @@
 <main>
 
   <!-- HERO -->
-  <section class="hero">
+  <section class="hero hero-editorial">
     <div class="container hero-inner">
-      <div class="badge-ribbon">Professional Service You Can Trust!</div>
-      <p class="eyebrow">Mobile Car Detailing &mdash; San Diego</p>
-      <h1>Bring Back the Shine<br>Your Vehicle Deserves!</h1>
-      <p class="hero-sub">Premium mobile detailing, wherever you are. San Diego based.</p>
+      <p class="eyebrow">San Diego &middot; Mobile Detailing &middot; Est. Craft, 10+ Years</p>
+      <div class="hero-rule"></div>
+      <h1>The Standard We Work To Is Yours.</h1>
+      <p class="hero-sub">Premium mobile detailing brought to your driveway, office, or wherever your vehicle is parked &mdash; treated with the same care as a concours restoration.</p>
       <div class="hero-ctas">
-        <a href="contact.html" class="btn btn-primary">Book Now</a>
+        <a href="contact.html" class="btn btn-primary">Book Your Detail</a>
         <a href="tel:6194385149" class="btn btn-outline">Call or Text (619) 438-5149</a>
       </div>
       <a href="https://www.google.com/search?q=Golden+Peanuts+Detail+reviews" target="_blank" rel="noopener" class="google-rating-badge">
@@ -132,32 +135,47 @@
         <span class="google-rating-stars">★★★★★</span>
         <span class="google-rating-count">30 <span class="google-word"><span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span class="g-blue">g</span><span class="g-green">l</span><span class="g-red">e</span></span> Reviews</span>
       </a>
-      <div class="trust-bar">
-        <div class="trust-item">
-          <span class="trust-icon">★</span>
-          <span>Over 10 Years Detailing Experience</span>
+    </div>
+  </section>
+
+  <!-- TRANSFORMATION (signature moment) -->
+  <section class="section transform-section reveal">
+    <div class="container">
+      <p class="eyebrow eyebrow-dark" style="text-align:center;">The Standard We Work To</p>
+      <h2 class="section-title">Every Detail, Restored</h2>
+      <p class="section-sub">Drag the divider. This is the same truck, the same angle &mdash; the only thing that changed is the attention it received.</p>
+      <div class="compare-slider" id="compare-slider">
+        <div class="compare-after">
+          <img src="images/gallery/gallery-tacoma-front-after.jpg" alt="Black Toyota Tacoma after detailing — deep glossy shine">
         </div>
-        <div class="trust-item">
-          <span class="trust-icon">🚐</span>
-          <span>Mobile Service — We Come to You</span>
+        <div class="compare-before" id="compare-before">
+          <img src="images/gallery/gallery-tacoma-front-before.jpg" alt="Black Toyota Tacoma before detailing — dusty exterior">
         </div>
+        <div class="compare-handle" id="compare-handle">
+          <span class="compare-handle-grip">&#10094;&#10095;</span>
+        </div>
+        <span class="compare-label compare-label-before">Before</span>
+        <span class="compare-label compare-label-after">After</span>
       </div>
     </div>
   </section>
 
   <!-- INTRO -->
-  <section class="section intro-section">
+  <section class="section intro-section reveal">
     <div class="container intro-grid">
       <div class="intro-text">
         <p class="eyebrow eyebrow-dark">San Diego's Mobile Detailing Service</p>
         <h2 class="section-title" style="text-align:left;">Bringing Back the Shine, One Vehicle at a Time</h2>
+        <blockquote class="pull-quote">
+          "We don't rush and we don't cut corners. Every detail gets the time it takes to do it right &mdash; because quality is the only standard we work to."
+          <span class="pull-quote-cite">&mdash; Daniel &amp; Luna, Golden Peanut's Detail</span>
+        </blockquote>
         <p>Your car, truck, boat, or RV gets our full attention right where it's parked. Tell us the day and time that works for you, and we'll show up ready to go &mdash; anywhere within 50 miles of San Diego.</p>
         <p>Our lineup covers Interior and Exterior Detailing, Complete Detail packages, Polishing, and ceramic upgrades, along with RV, trailer, and boat detailing. Need a one-time deep clean or year-round upkeep? Either way, we've got it handled.</p>
-        <p>We don't rush and we don't cut corners. Every detail gets the time it takes to do it right, catching the spots other washes skip. That's the difference: not just closer to you, but genuinely more thorough &mdash; because quality is the only standard we work to.</p>
         <a href="contact.html" class="btn btn-primary">Book Your Detail</a>
       </div>
-      <div class="intro-logo-wrap">
-        <img src="images/logo.png" alt="Golden Peanut's Detail logo" class="intro-logo">
+      <div class="intro-photo-wrap">
+        <img src="images/gallery/gallery-audi-a6.jpg" alt="Detailed black Audi A6, mobile detailing">
       </div>
     </div>
   </section>
@@ -204,7 +222,7 @@
   </section>
 
   <!-- POPULAR SERVICES -->
-  <section class="section">
+  <section class="section reveal">
     <div class="container">
       <div class="popular-services-header">
         <h2 class="section-title" style="text-align:left; margin-bottom:0;">Popular Services</h2>
@@ -328,7 +346,7 @@
   </section>
 
   <!-- SPOTLESS FINISH / SERVICE AREA -->
-  <section class="section">
+  <section class="section reveal">
     <div class="container spotless-grid">
       <div class="spotless-text">
         <h2 class="section-title" style="text-align:left;">Get a Showroom Shine With Our Complete Mobile Detailing Services</h2>
@@ -357,7 +375,7 @@
   </section>
 
   <!-- CLASSIC & EXOTIC -->
-  <section class="section">
+  <section class="section reveal">
     <div class="container classic-grid">
       <div class="classic-image">
         <img src="images/gallery/gallery-camaro-ss.jpg" alt="Detailed classic red Chevrolet Camaro SS">
@@ -376,6 +394,7 @@
       <div class="quote-text">
         <img src="images/quote-mascot-full.png" alt="Peanut mascot on the phone" class="quote-mascot">
         <div class="quote-text-copy">
+          <p class="eyebrow" style="text-align:left;">Ready When You Are</p>
           <h2 class="section-title quote-title">Get Your Free Quote!</h2>
           <p>We'll get back to you within minutes.</p>
         </div>
@@ -442,7 +461,7 @@
   </div>
 </footer>
 
-<script src="js/main.js?v=20260901a"></script>
+<script src="js/main.js?v=20260901b"></script>
 <script src="vendor/leaflet/leaflet.js"></script>
 <script src="js/service-map.js?v=20260817a"></script>
 </body>
