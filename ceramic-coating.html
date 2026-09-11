@@ -245,6 +245,7 @@
       </div>
       <form class="quote-form" id="ceramic-quote-form" action="https://formspree.io/f/xaewpwea" method="POST">
         <input type="hidden" name="_subject" value="New ceramic coating quote request from website">
+        <input type="hidden" name="_cc" value="arturodmora@icloud.com">
         <input type="text" name="name" placeholder="Full Name" required>
         <div class="quote-form-row">
           <input type="tel" name="phone" placeholder="Phone Number" required>
@@ -257,6 +258,16 @@
           <option value="Gold">Gold</option>
           <option value="Platinum">Platinum</option>
           <option value="Not Sure">Not Sure</option>
+        </select>
+        <select name="source" required>
+          <option value="" disabled selected>How did you find us?</option>
+          <option value="Google">Google</option>
+          <option value="Instagram">Instagram</option>
+          <option value="Facebook">Facebook</option>
+          <option value="Friend / Referral">Friend / Referral</option>
+          <option value="Yelp">Yelp</option>
+          <option value="Golden Peanut's Detail">Golden Peanut's Detail</option>
+          <option value="Other">Other</option>
         </select>
         <button type="submit" class="btn btn-primary quote-submit">Submit Quote Request</button>
         <p class="form-note" id="ceramic-quote-form-note"></p>
